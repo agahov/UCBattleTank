@@ -1,0 +1,90 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "UCBattleTanks (Debug)",
+			"request": "launch",
+			"preLaunchTask": "UCBattleTanks Mac Debug Build",
+			"program": "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Binaries/Mac/UCBattleTanks-Mac-Debug.app/Contents/MacOS/UCBattleTanks-Mac-Debug",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.18",
+			"type": "lldb"
+		},
+		{
+			"name": "UCBattleTanks (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "UCBattleTanks Mac DebugGame Build",
+			"program": "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Binaries/Mac/UCBattleTanks-Mac-DebugGame.app/Contents/MacOS/UCBattleTanks-Mac-DebugGame",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.18",
+			"type": "lldb"
+		},
+		{
+			"name": "UCBattleTanks (Development)",
+			"request": "launch",
+			"preLaunchTask": "UCBattleTanks Mac Development Build",
+			"program": "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Binaries/Mac/UCBattleTanks.app/Contents/MacOS/UCBattleTanks",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.18",
+			"type": "lldb"
+		},
+		{
+			"name": "UCBattleTanks (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "UCBattleTanks Mac Shipping Build",
+			"program": "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Binaries/Mac/UCBattleTanks-Mac-Shipping.app/Contents/MacOS/UCBattleTanks-Mac-Shipping",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.18",
+			"type": "lldb"
+		},
+		{
+			"name": "UCBattleTanks (Test)",
+			"request": "launch",
+			"preLaunchTask": "UCBattleTanks Mac Test Build",
+			"program": "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Binaries/Mac/UCBattleTanks-Mac-Test.app/Contents/MacOS/UCBattleTanks-Mac-Test",
+			"args": [
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.18",
+			"type": "lldb"
+		},
+		{
+			"name": "UCBattleTanksEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "UCBattleTanksEditor Mac Debug Build",
+			"program": "/Users/Shared/Epic Games/UE_4.18/Engine/Binaries/Mac/UE4Editor-Mac-Debug.app/Contents/MacOS/UE4Editor-Mac-Debug",
+			"args": [
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-debug"
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.18",
+			"type": "lldb"
+		},
+		{
+			"name": "UCBattleTanksEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "UCBattleTanksEditor Mac DebugGame Build",
+			"program": "/Users/Shared/Epic Games/UE_4.18/Engine/Binaries/Mac/UE4Editor.app/Contents/MacOS/UE4Editor",
+			"args": [
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-debug"
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.18",
+			"type": "lldb"
+		},
+		{
+			"name": "UCBattleTanksEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "UCBattleTanksEditor Mac Development Build",
+			"program": "/Users/Shared/Epic Games/UE_4.18/Engine/Binaries/Mac/UE4Editor.app/Contents/MacOS/UE4Editor",
+			"args": [
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject"
+			],
+			"cwd": "/Users/Shared/Epic Games/UE_4.18",
+			"type": "lldb"
+		}
+	]
+}

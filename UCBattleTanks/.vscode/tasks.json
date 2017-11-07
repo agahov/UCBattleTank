@@ -1,0 +1,635 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"taskName": "UCBattleTanks Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"Debug",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"Debug",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"DebugGame",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"DebugGame",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"Development",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"Development",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks Mac Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"Shipping",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks Mac Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"Shipping",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks Mac Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"Test",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks Mac Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"Mac",
+				"Test",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"Debug",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"Debug",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"DebugGame",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"DebugGame",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"Development",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"Development",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"Shipping",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"Shipping",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"Test",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks IOS Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"IOS",
+				"Test",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"Debug",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"Debug",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"DebugGame",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"DebugGame",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"Development",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"Development",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"Shipping",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"Shipping",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"Test",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanks HTML5 Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanks",
+				"HTML5",
+				"Test",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanksEditor Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanksEditor",
+				"Mac",
+				"Debug",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanksEditor Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanksEditor",
+				"Mac",
+				"Debug",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanksEditor Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanksEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanksEditor Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanksEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanksEditor Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanksEditor",
+				"Mac",
+				"Development",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		},
+		{
+			"taskName": "UCBattleTanksEditor Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"UCBattleTanksEditor",
+				"Mac",
+				"Development",
+				"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/UCBattleTanks.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.18"
+			}
+		}
+	]
+}

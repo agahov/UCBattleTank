@@ -4,3 +4,4 @@
 ## RoadMam
 * init
 * setup git rep
+* create blank project

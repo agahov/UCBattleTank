@@ -1,0 +1,8 @@
+{
+	"typescript.tsc.autoDetect": "off",
+	"files.exclude": {
+		"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/.vscode": true,
+		"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Content": true,
+		"/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Intermediate": true
+	}
+}
