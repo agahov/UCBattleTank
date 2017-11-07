@@ -5,3 +5,7 @@
 * init
 * setup git rep
 * create blank project
+* add simple landscape 
+ - two color 
+ - 1000x1000 meters
+ 
