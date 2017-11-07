@@ -3,3 +3,4 @@
 
 ## RoadMam
 * init
+* setup git rep
