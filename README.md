@@ -8,4 +8,5 @@
 * add simple landscape 
  - two color 
  - 1000x1000 meters
+* recreate low poly landscsape
  
