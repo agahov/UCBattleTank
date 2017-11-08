@@ -10,4 +10,5 @@
  - 1000x1000 meters
 * recreate low poly landscape
 * add texture to landscape material
+* add tank meshes,  create sockets, create TankBP with mesh 
  
