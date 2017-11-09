@@ -11,4 +11,5 @@
 * recreate low poly landscape
 * add texture to landscape material
 * add tank meshes,  create sockets, create TankBP with mesh 
+* config Tank_BP, create BP_UCTankBattleGameMode
  
