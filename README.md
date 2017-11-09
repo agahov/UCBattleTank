@@ -13,4 +13,5 @@
 * add tank meshes,  create sockets, create TankBP with mesh 
 * config Tank_BP, create BP_UCTankBattleGameMode
 * camera input setup
+* add Azimuth Gimblal - fix camera rotation
  
