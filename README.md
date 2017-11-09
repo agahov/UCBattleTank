@@ -14,4 +14,5 @@
 * config Tank_BP, create BP_UCTankBattleGameMode
 * camera input setup
 * add Azimuth Gimblal - fix camera rotation
+* add Aim UI
  
