@@ -23,5 +23,9 @@
 * add GetSightRayHitLocation template method
 * calculate crosshairScreenLocation
 * add GetLookDirection method
+* complete GetSightRayHitLocation 
+
+
+
 
  
