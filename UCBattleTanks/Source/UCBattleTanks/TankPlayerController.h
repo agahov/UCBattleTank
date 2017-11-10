@@ -17,6 +17,8 @@ class UCBATTLETANKS_API ATankPlayerController : public APlayerController
 	GENERATED_BODY()
 	
 public:
+
+	void BeginPlay() override;
 	ATank* GetControlledTank() const;	
 	
 	
