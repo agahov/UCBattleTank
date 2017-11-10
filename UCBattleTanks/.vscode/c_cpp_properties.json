@@ -5,6 +5,7 @@
             "includePath": [
                 "/Users/Shared/Epic Games/UE_4.18/Engine/Source",
                 "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Source",
+                "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Intermediate/Build/Mac/UE4Editor/Inc/UCBattleTanks",
                 "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Source/UCBattleTanks",
                 "/Users/Shared/Epic Games/UE_4.18/Engine/Source/Runtime/Core/Public",
                 "/Users/Shared/Epic Games/UE_4.18/Engine/Source/Runtime/Core/Public/Internationalization",
@@ -334,8 +335,7 @@
                 "/Users/Shared/Epic Games/UE_4.18/Engine/Intermediate/Build/Mac/UE4Editor/Inc/AudioMixer",
                 "/Users/Shared/Epic Games/UE_4.18/Engine/Source/Runtime/AudioMixer",
                 "/usr/include",
-                "/usr/local/include",
-                "${workspaceRoot}"
+                "/usr/local/include"
             ],
             "intelliSenseMode": "clang-x64",
             "macFrameworkPath": [
@@ -350,6 +350,7 @@
                 "path": [
                     "/Users/Shared/Epic Games/UE_4.18/Engine/Source",
                     "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Source",
+                    "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Intermediate/Build/Mac/UE4Editor/Inc/UCBattleTanks",
                     "/Users/gakhov/Space/unrealProjects/UCBattleTanks/UCBattleTanks/Source/UCBattleTanks",
                     "/Users/Shared/Epic Games/UE_4.18/Engine/Source/Runtime/Core/Public",
                     "/Users/Shared/Epic Games/UE_4.18/Engine/Source/Runtime/Core/Public/Internationalization",
@@ -679,8 +680,7 @@
                     "/Users/Shared/Epic Games/UE_4.18/Engine/Intermediate/Build/Mac/UE4Editor/Inc/AudioMixer",
                     "/Users/Shared/Epic Games/UE_4.18/Engine/Source/Runtime/AudioMixer",
                     "/usr/include",
-                    "/usr/local/include",
-                    "${workspaceRoot}"
+                    "/usr/local/include"
                 ]
             }
         }

@@ -16,4 +16,5 @@
 * add Azimuth Gimblal - fix camera rotation
 * add Aim UI
 * start mainMenu 
+* add Parent C++ classes for BP_TankPlayerController and TankPawn
  
