@@ -21,5 +21,6 @@
 * add GetPlayerTank method to TankAIController
 * add Tick method to TankPlayerController, start AimTowardsCrossHair
 * add GetSightRayHitLocation template method
+* calculate crosshairScreenLocation
 
  
