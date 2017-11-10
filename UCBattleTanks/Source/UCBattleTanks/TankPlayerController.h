@@ -19,7 +19,13 @@ class UCBATTLETANKS_API ATankPlayerController : public APlayerController
 public:
 
 	void BeginPlay() override;
+	void Tick(float DeltaTime) override;
+
 	ATank* GetControlledTank() const;	
+
+
+	//start movint the barrow to cross hair
+	void AimTowardsCrossHair();
 	
 	
 };

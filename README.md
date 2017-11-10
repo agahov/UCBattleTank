@@ -17,5 +17,8 @@
 * add Aim UI
 * start mainMenu 
 * add Parent C++ classes for BP_TankPlayerController and TankPawn
-* move  BeginPlayer form BP_TankPayerController to C++ TankPlayerController
+* move BeginPlayer form BP_TankPayerController to C++ TankPlayerController
+* add GetPlayerTank method to TankAIController
+* add Tick method to TankPlayerController, start AimTowardsCrossHair
+
  
