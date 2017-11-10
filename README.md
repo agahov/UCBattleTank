@@ -20,5 +20,6 @@
 * move BeginPlayer form BP_TankPayerController to C++ TankPlayerController
 * add GetPlayerTank method to TankAIController
 * add Tick method to TankPlayerController, start AimTowardsCrossHair
+* add GetSightRayHitLocation template method
 
  

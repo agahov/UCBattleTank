@@ -27,5 +27,7 @@ public:
 	//start movint the barrow to cross hair
 	void AimTowardsCrossHair();
 	
+
+	bool GetSightRayHitLocation(FVector& HitLocation) const;
 	
 };
