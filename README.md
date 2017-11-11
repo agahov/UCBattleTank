@@ -30,6 +30,11 @@
 * add LaunchSpeed
 * invoke SuggestProjectileVelocity
 * add MoveBarrelTowards
+* create and setup TankBarrel Component
+* refacloring
+* make forwardeclaration
+
+
 
 
 
