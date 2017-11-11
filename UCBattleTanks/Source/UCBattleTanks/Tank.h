@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include "TankAimingComponent.h"
+
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
@@ -16,6 +18,10 @@ public:
 	ATank();
 
 protected:
+
+	UTankAimingComponent* TankAimingComponent = nullptr;
+
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 		// Called every frame
@@ -23,6 +29,9 @@ protected:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
+
 
 
 public:	

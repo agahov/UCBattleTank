@@ -25,6 +25,7 @@
 * add GetLookDirection method
 * complete GetSightRayHitLocation 
 * add Tank.AimAt() method, used for all controllers
+* add TankAimingComponent
 
 
 
