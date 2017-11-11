@@ -44,12 +44,7 @@ void UTankAimingComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 
 void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 {
-// 	auto OurTankName = GetOwner()->GetName();
-// 	auto BarrelLocation = Barrel->GetComponentLocation();
 
-
-//   UE_LOG(LogTemp,Warning, TEXT("%s:: Hit location: %s  from %s"),*OurTankName, *HitLocation.ToString(), *BarrelLocation.ToString());  
- //   UE_LOG(LogTemp,Warning, TEXT("lunch with: %f "), LaunchSpeed);  
 
 	if (!Barrel) {return;}
 
@@ -64,8 +59,8 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 	(
 		this,
 	 	OutLaunchVelocity,
-		HitLocation,
 		StartLocation,
+		HitLocation,
 		LaunchSpeed,
 		false,
 		0,
@@ -90,9 +85,13 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
 	auto BarrelRotator  = Barrel->GetForwardVector().Rotation();
+	//auto vv = Barrel->GetForwardVector().
 	auto AimAsRotator = AimDirection.Rotation();
-	//UE_LOG(LogTemp, Warning, TEXT("AimAsRotator: %s"), *AimAsRotator.ToString());
-	Barrel->Elevate(5) ; //
+	auto Pitch = AimDirection.Rotation().Pitch;
+	UE_LOG(LogTemp, Warning, TEXT("Pitch: %f"), Pitch);
+
+	auto DeltaRotation =  AimAsRotator - BarrelRotator;
+	Barrel->Elevate(DeltaRotation.Pitch) ; //
 }
 
 

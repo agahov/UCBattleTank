@@ -11,7 +11,7 @@ class UTankBarrel;
 /**
  * 
  */
-UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), hideCategories=(Collision))
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class UCBATTLETANKS_API UTankBarrel : public UStaticMeshComponent
 {
 	GENERATED_BODY()
@@ -19,7 +19,7 @@ class UCBATTLETANKS_API UTankBarrel : public UStaticMeshComponent
 
 public:  
 	//1  up  -1 down
-	void Elevate(float RelativeDegrees);
+	void Elevate(float RelativeSpeed);
 	
 private:
 	UPROPERTY(EditAnywhere, Category = Setup)
