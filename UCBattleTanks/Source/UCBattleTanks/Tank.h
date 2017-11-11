@@ -8,6 +8,8 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
+class UTankBarrel;
+
 UCLASS()
 class UCBATTLETANKS_API ATank : public APawn
 {
@@ -17,7 +19,7 @@ public:
 	// Sets default values for this pawn's properties
 	ATank();
 	UFUNCTION(BlueprintCallable, Category = Setup)
-	void  SetBarrelReference(UStaticMeshComponent * BarrelToSet);
+	void  SetBarrelReference(UTankBarrel * BarrelToSet);
 
 	UPROPERTY(EditAnywhere, Category = Firing)
 	float LaunchSpeed = 100000;//starting value

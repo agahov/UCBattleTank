@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "TankAimingComponent.h"
-//#include "GameplayStaticsTypes.h"
+#include "TankBarrel.h"
+
 
 
 // Sets default values for this component's properties
@@ -25,7 +26,7 @@ void UTankAimingComponent::BeginPlay()
 	// ...
 	
 }
-void  UTankAimingComponent::SetBarrelReference(UStaticMeshComponent * BarrelToSet)
+void  UTankAimingComponent::SetBarrelReference(UTankBarrel* BarrelToSet)
 {
 	Barrel = BarrelToSet;
 
@@ -91,6 +92,7 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 	auto BarrelRotator  = Barrel->GetForwardVector().Rotation();
 	auto AimAsRotator = AimDirection.Rotation();
 	UE_LOG(LogTemp, Warning, TEXT("AimAsRotator: %s"), *AimAsRotator.ToString());
+	Barrel->Elevate(5) ; //
 }
 
 
