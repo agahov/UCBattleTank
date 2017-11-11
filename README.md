@@ -26,6 +26,7 @@
 * complete GetSightRayHitLocation 
 * add Tank.AimAt() method, used for all controllers
 * add TankAimingComponent
+* set Barrel through Blueprint
 
 
 

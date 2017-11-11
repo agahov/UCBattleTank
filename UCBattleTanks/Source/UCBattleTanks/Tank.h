@@ -16,6 +16,8 @@ class UCBATTLETANKS_API ATank : public APawn
 public:
 	// Sets default values for this pawn's properties
 	ATank();
+	UFUNCTION(BlueprintCallable, Category = Setup)
+	void  SetBarrelReference(UStaticMeshComponent * BarrelToSet);
 
 protected:
 
