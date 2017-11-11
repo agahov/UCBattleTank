@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "TankAimingComponent.h"
+//#include "GameplayStaticsTypes.h"
 
 
 // Sets default values for this component's properties
@@ -47,7 +48,46 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 
 
 //   UE_LOG(LogTemp,Warning, TEXT("%s:: Hit location: %s  from %s"),*OurTankName, *HitLocation.ToString(), *BarrelLocation.ToString());  
-    UE_LOG(LogTemp,Warning, TEXT("lunch with: %f "), LaunchSpeed);  
+ //   UE_LOG(LogTemp,Warning, TEXT("lunch with: %f "), LaunchSpeed);  
+
+	if (!Barrel) {return;}
+
+	FVector OutLaunchVelocity;
+	FVector StartLocation = Barrel->GetSocketLocation(FName("Projectile"));
+
+	float CollisionRadius = 0;
+
+
+
+	if (UGameplayStatics::SuggestProjectileVelocity
+	(
+		this,
+	 	OutLaunchVelocity,
+		HitLocation,
+		StartLocation,
+		LaunchSpeed,
+		false,
+		0,
+		0,
+		ESuggestProjVelocityTraceOption::DoNotTrace
+	)
+	)
+	{
+
+		FVector AimDirection = OutLaunchVelocity.GetSafeNormal();
+		UE_LOG(LogTemp,Warning, TEXT("Aim at: %s "), *AimDirection.ToString());  
+
+	}
+	else
+	{
+		UE_LOG(LogTemp,Warning, TEXT("Miss "));  
+	}
+
+		
+
+
+
+
 
 }
 

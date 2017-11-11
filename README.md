@@ -28,6 +28,7 @@
 * add TankAimingComponent
 * set Barrel through Blueprint
 * add LaunchSpeed
+* invoke SuggestProjectileVelocity
 
 
 
