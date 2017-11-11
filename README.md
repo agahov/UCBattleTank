@@ -29,7 +29,7 @@
 * set Barrel through Blueprint
 * add LaunchSpeed
 * invoke SuggestProjectileVelocity
-
+* add MoveBarrelTowards
 
 
 

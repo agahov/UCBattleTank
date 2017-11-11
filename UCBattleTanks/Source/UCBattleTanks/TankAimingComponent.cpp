@@ -76,19 +76,21 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 
 		FVector AimDirection = OutLaunchVelocity.GetSafeNormal();
 		UE_LOG(LogTemp,Warning, TEXT("Aim at: %s "), *AimDirection.ToString());  
+		MoveBarrelTowards(AimDirection);
 
 	}
 	else
 	{
 		UE_LOG(LogTemp,Warning, TEXT("Miss "));  
 	}
-
-		
-
+}
 
 
-
-
+void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
+{
+	auto BarrelRotator  = Barrel->GetForwardVector().Rotation();
+	auto AimAsRotator = AimDirection.Rotation();
+	UE_LOG(LogTemp, Warning, TEXT("AimAsRotator: %s"), *AimAsRotator.ToString());
 }
 
 
