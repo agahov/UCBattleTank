@@ -15,9 +15,13 @@ class UCBATTLETANKS_API ATankAIController : public AAIController
 {
 	GENERATED_BODY()
 	
-	public:
-
+private:
+	void Tick(float DeltaTime) override;
 	void BeginPlay() override;
+
+public:
+
+	
 	ATank* GetControlledTank() const;	
 	ATank* GetPlayerTank() const;	
 	

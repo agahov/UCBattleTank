@@ -48,7 +48,7 @@ void ATankPlayerController::AimTowardsCrossHair()
     if (GetSightRayHitLocation(HitLocation))
     {
         UE_LOG(LogTemp,Warning, TEXT("Hit location: %s"), *HitLocation.ToString());  
-
+        GetControlledTank()->AimAt(HitLocation);
     }
    
 

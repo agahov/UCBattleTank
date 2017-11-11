@@ -29,11 +29,24 @@ void ATankAIController::BeginPlay()
     {
         UE_LOG(LogTemp, Warning, TEXT("TankAIController  find:  %s"), *(PlayerTank->GetName()));
     }
-
-
-
-    
+   
 }
+
+void ATankAIController::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+    //UE_LOG(LogTemp, Warning, TEXT("TankPlayerController ticking"));
+    //AimTowardsCrossHair();
+   if (GetPlayerTank())
+   {
+       GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+   }
+
+
+}
+
+
+
 
 
 ATank* ATankAIController::GetControlledTank() const
