@@ -54,5 +54,5 @@ void ATank::Fire()
 	if (!Barrel) {return;}
 
 	 UE_LOG(LogTemp,Warning, TEXT("Fire"));
-	 AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint, Barrel->GetSocketLocation(FName("Projectile")),FRotator::ZeroRotator );
+	 GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint, Barrel->GetSocketLocation(FName("Projectile")),FRotator::ZeroRotator );
 }
