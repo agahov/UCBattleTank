@@ -2,7 +2,7 @@
 
 #include "TankAimingComponent.h"
 #include "TankBarrel.h"
-
+#include "TankTurret.h"
 
 
 // Sets default values for this component's properties
@@ -22,14 +22,17 @@ UTankAimingComponent::UTankAimingComponent()
 void UTankAimingComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// ...
-	
 }
+
+
 void  UTankAimingComponent::SetBarrelReference(UTankBarrel* BarrelToSet)
 {
 	Barrel = BarrelToSet;
+}
 
+void  UTankAimingComponent::SetTurretReference(UTankTurret* TurretToSet)
+{
+	Turret = TurretToSet;
 }
 
 
@@ -73,6 +76,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 		FVector AimDirection = OutLaunchVelocity.GetSafeNormal();
 		//UE_LOG(LogTemp,Warning, TEXT("Aim at: %s "), *AimDirection.ToString());  
 		MoveBarrelTowards(AimDirection);
+		MoveTurretTowards(AimDirection);
 
 	}
 	else
@@ -85,13 +89,24 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
 	auto BarrelRotator  = Barrel->GetForwardVector().Rotation();
-	//auto vv = Barrel->GetForwardVector().
 	auto AimAsRotator = AimDirection.Rotation();
-	auto Pitch = AimDirection.Rotation().Pitch;
-	//UE_LOG(LogTemp, Warning, TEXT("Pitch: %f"), Pitch);
+
 
 	auto DeltaRotation =  AimAsRotator - BarrelRotator;
 	Barrel->Elevate(DeltaRotation.Pitch) ; //
+	
+
 }
 
+void UTankAimingComponent::MoveTurretTowards(FVector AimDirection)
+{
+	auto BarrelRotator  = Turret->GetForwardVector().Rotation();
+	auto AimAsRotator = AimDirection.Rotation();
+
+
+	auto DeltaRotation =  AimAsRotator - BarrelRotator;
+
+	Turret->Azimuth(DeltaRotation.Yaw) ; //
+
+}
 
