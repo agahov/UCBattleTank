@@ -47,9 +47,14 @@ private:
 	float LaunchSpeed = 4000;//starting value
 
 	UPROPERTY(EditAnywhere, Category = Tank)
+	float ReloadTimeInSeconds = 3;
+
+	UPROPERTY(EditAnywhere, Category = Tank)
 	TSubclassOf<AProjectile> ProjectileBlueprint;
 
 	UTankBarrel* Barrel = nullptr;
+
+	double LastFireTime = 0;
 
 	//UClass* ProjectileBlueprint;
 
