@@ -53,6 +53,9 @@ void ATank::Fire()
 {
 	if (!Barrel) {return;}
 
-	 UE_LOG(LogTemp,Warning, TEXT("Fire"));
-	 GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint, Barrel->GetSocketLocation(FName("Projectile")),FRotator::ZeroRotator );
+	 //UE_LOG(LogTemp,Warning, TEXT("Fire"));
+	 auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint, 
+	 	Barrel->GetSocketLocation(FName("Projectile")),
+		Barrel->GetSocketRotation(FName("Projectile")));
+	 Projectile->LunchProjectile(LaunchSpeed); 
 }
