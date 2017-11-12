@@ -42,6 +42,7 @@
 * SpawnActor for projectile
 * recommit prev
 * add ProjectileMovementComponent in c++
+* EditDefaultsOnly
 
 
 
