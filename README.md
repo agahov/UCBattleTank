@@ -43,6 +43,7 @@
 * recommit prev
 * add ProjectileMovementComponent in c++
 * EditDefaultsOnly
+* Simplify collision 
 
 
 
