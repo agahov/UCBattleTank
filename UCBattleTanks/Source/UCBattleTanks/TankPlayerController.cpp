@@ -49,13 +49,8 @@ void ATankPlayerController::AimTowardsCrossHair()
     {
         //UE_LOG(LogTemp,Warning, TEXT("Hit location: %s"), *HitLocation.ToString());  
         GetControlledTank()->AimAt(HitLocation);
-    }
-   
-
-    
-
-}
-    
+    }   
+}    
 
 
 bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const
@@ -68,22 +63,23 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const
     
     FVector LookDirection;
     
-    if (GetLookDirection(ScreenLocation, LookDirection))
-    {
-       
-        
-
-         GetLookVectorHitLocation(LookDirection, HitLocation); 
-        return true;
-     }
    
-
-    
-
+ if (GetLookDirection(ScreenLocation, LookDirection))
+    {
+        return  GetLookVectorHitLocation(LookDirection, HitLocation); 
+        
+     }
   
     HitLocation = FVector(0);
     return false;
 }
+
+bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const
+{
+    FVector WorldLocation;
+    return DeprojectScreenPositionToWorld(ScreenLocation.X, ScreenLocation.Y, WorldLocation, LookDirection);
+}
+
 
 
 bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const
@@ -113,8 +109,3 @@ bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVec
 
 }
 
-bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const
-{
-    FVector WorldLocation;
-    return DeprojectScreenPositionToWorld(ScreenLocation.X, ScreenLocation.Y, WorldLocation, LookDirection);
-}

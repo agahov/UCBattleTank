@@ -77,7 +77,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 	}
 	else
 	{
-		UE_LOG(LogTemp,Warning, TEXT("Miss "));  
+		UE_LOG(LogTemp,Warning, TEXT("MISS.............. "));  
 	}
 }
 
@@ -88,7 +88,7 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 	//auto vv = Barrel->GetForwardVector().
 	auto AimAsRotator = AimDirection.Rotation();
 	auto Pitch = AimDirection.Rotation().Pitch;
-	UE_LOG(LogTemp, Warning, TEXT("Pitch: %f"), Pitch);
+	//UE_LOG(LogTemp, Warning, TEXT("Pitch: %f"), Pitch);
 
 	auto DeltaRotation =  AimAsRotator - BarrelRotator;
 	Barrel->Elevate(DeltaRotation.Pitch) ; //
