@@ -28,7 +28,7 @@ public:
 	void  SetTurretReference(UTankTurret * TurretToSet);
 
 	UPROPERTY(EditAnywhere, Category = Firing)
-	float LaunchSpeed = 200000;//starting value
+	float LaunchSpeed = 4000;//starting value
 
 protected:
 

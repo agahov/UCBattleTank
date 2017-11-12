@@ -36,6 +36,7 @@
 * Rotate Barrel
 * if miss barrel stop not moving to zero  
 * Rotate Turret(self)
+* Setup default values
 
 
 
