@@ -49,6 +49,8 @@ public:
 
 	void AimAt(FVector HitLocation);
 
+	UFUNCTION(BlueprintCallable, Category = Tank)
+	void Fire();
 
 	
 	

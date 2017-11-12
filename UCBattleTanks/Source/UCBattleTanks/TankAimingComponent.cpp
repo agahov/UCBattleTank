@@ -77,7 +77,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 	}
 	else
 	{
-		UE_LOG(LogTemp,Warning, TEXT("MISS.............. "));  
+		//UE_LOG(LogTemp,Warning, TEXT("MISS.............. "));  
 	}
 }
 

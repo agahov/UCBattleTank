@@ -9,7 +9,7 @@ void UTankTurret::Azimuth(float RelativeSpeed)
 
 
     auto Time = GetWorld()->GetTimeSeconds();
-    UE_LOG(LogTemp,Warning, TEXT("%f:: Turret->Azimuth() called"), Time);
+    //UE_LOG(LogTemp,Warning, TEXT("%f:: Turret->Azimuth() called"), Time);
 
     RelativeSpeed = FMath::Clamp<float>(RelativeSpeed, -1.f, 1.f);
     
