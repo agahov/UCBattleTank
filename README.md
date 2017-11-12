@@ -39,6 +39,7 @@
 * Setup default values
 * Fire method, Projectile class
 * remove collision bound form turret and barrel
+* SpawnActor for projectile
 
 
 
