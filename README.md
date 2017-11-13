@@ -44,6 +44,7 @@
 * add ProjectileMovementComponent in c++
 * EditDefaultsOnly
 * Simplify collision 
+* start throttle
 
 
 
