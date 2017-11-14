@@ -13,6 +13,10 @@ UCLASS()
 class UCBATTLETANKS_API UTankMovementComponent : public UNavMovementComponent
 {
 	GENERATED_BODY()
+
+public:
+	UFUNCTION(BlueprintCallable, Category = Tank)
+	void IntendMoveForvard(float Throw);
 	
 	
 	

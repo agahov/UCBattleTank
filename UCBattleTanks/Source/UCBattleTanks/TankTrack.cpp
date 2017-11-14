@@ -15,7 +15,7 @@ void UTankTrack::SetThrottle(float Throttle)
 
     TankRoot->AddForceAtLocation(ForceApplied,ForceLocation);
 
-    UE_LOG(LogTemp,Warning, TEXT("Track RootName: %s  "), *TankRoot->GetName());
+    //UE_LOG(LogTemp,Warning, TEXT("Track RootName: %s  "), *TankRoot->GetName());
 }
 
 
