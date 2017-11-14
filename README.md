@@ -49,6 +49,7 @@
 * Physics and friction settings
 * add UTankMovementComponent
 * add Intend move forward
+* init and use UTankMovementComponent
 
 
 

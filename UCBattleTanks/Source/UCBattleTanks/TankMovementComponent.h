@@ -3,20 +3,32 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+
 #include "GameFramework/NavMovementComponent.h"
 #include "TankMovementComponent.generated.h"
 
+
+class UTankTrack;
 /**
  * 
  */
-UCLASS()
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class UCBATTLETANKS_API UTankMovementComponent : public UNavMovementComponent
 {
 	GENERATED_BODY()
 
 public:
 	UFUNCTION(BlueprintCallable, Category = Tank)
+	void Ininitialise(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet);
+
+	UFUNCTION(BlueprintCallable, Category = Tank)
 	void IntendMoveForvard(float Throw);
+
+
+private:
+	UTankTrack* LeftTrack = nullptr;	
+	UTankTrack* RightTrack = nullptr;	
 	
 	
 	

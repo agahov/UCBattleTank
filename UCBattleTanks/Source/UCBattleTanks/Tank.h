@@ -38,8 +38,8 @@ public:
 protected:
 	UTankAimingComponent* TankAimingComponent = nullptr;
 
-	UPROPERTY(BlueprintReadOnly, Category = Tank)
-	UTankMovementComponent* TankMovementComponent = nullptr;
+	// UPROPERTY(BlueprintReadOnly, Category = Tank)
+	// UTankMovementComponent* TankMovementComponent = nullptr;
 
 private:	
 	ATank();
