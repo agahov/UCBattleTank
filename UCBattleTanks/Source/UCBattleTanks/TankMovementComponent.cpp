@@ -45,6 +45,6 @@ void UTankMovementComponent::Ininitialise(UTankTrack* LeftTrackToSet, UTankTrack
 void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool bForceMaxSpeed) 
 {
     auto Name = GetOwner()->GetName();
-    UE_LOG(LogTemp, Warning, TEXT("%s  RequestDirectMove velocity %f"), *MoveVelocity.ToString());	
+    UE_LOG(LogTemp, Warning, TEXT("%s  RequestDirectMove velocity %s"),*Name, *MoveVelocity.ToString());	
 }
 
