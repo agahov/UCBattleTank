@@ -53,6 +53,12 @@ void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool
     UE_LOG(LogTemp, Warning, TEXT("%s  cos  %f"),*Name, Cosfun);
     IntendMoveForvard(Cosfun);
 
+    auto CrossVector = FVector::CrossProduct(AIForwardIntention, TankForward);
+    UE_LOG(LogTemp, Warning, TEXT("%s cos %f||  z  %f"),*Name, Cosfun, CrossVector.Z);
+
+    IntendTurnRight(CrossVector.Z);
+
+
    
      	
 }
