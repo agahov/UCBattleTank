@@ -5,12 +5,33 @@
 
 void UTankMovementComponent::IntendMoveForvard(float Throw)
 {
-    UE_LOG(LogTemp,Warning, TEXT("Intem move forvard:  %f "), Throw);
+    //UE_LOG(LogTemp,Warning, TEXT("Intem move forvard:  %f "), Throw);
     if (!LeftTrack || !RightTrack) {return;}
 
     LeftTrack->SetThrottle(Throw);
     RightTrack->SetThrottle(Throw);
 }
+
+
+void UTankMovementComponent::IntendTurnRight(float Throw)
+{
+    //UE_LOG(LogTemp,Warning, TEXT("Intem move forvard:  %f "), Throw);
+    if (!LeftTrack || !RightTrack) {return;}
+
+    LeftTrack->SetThrottle(Throw);
+    RightTrack->SetThrottle(-Throw);
+}
+
+
+void UTankMovementComponent::IntendTurnLeft(float Throw)
+{
+    //UE_LOG(LogTemp,Warning, TEXT("Intem move forvard:  %f "), Throw);
+    if (!LeftTrack || !RightTrack) {return;}
+
+    LeftTrack->SetThrottle(-Throw);
+    RightTrack->SetThrottle(Throw);
+}
+
 
 
 void UTankMovementComponent::Ininitialise(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet)
