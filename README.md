@@ -53,6 +53,7 @@
 * IntendTurnRight IntendTurnLeft
 * Add NavMeshVolume
 * add RequestDirectMove method
+* use DotProduct for AI forward moveing
 
 
 
