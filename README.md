@@ -52,6 +52,7 @@
 * init and use UTankMovementComponent
 * IntendTurnRight IntendTurnLeft
 * Add NavMeshVolume
+* add RequestDirectMove method
 
 
 

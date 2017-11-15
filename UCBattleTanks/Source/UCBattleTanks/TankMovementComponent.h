@@ -31,6 +31,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Tank)
 	void IntendTurnLeft(float Throw);
 
+	virtual void RequestDirectMove(const FVector& MoveVelocity, bool bForceMaxSpeed) override;
+
 
 
 private:

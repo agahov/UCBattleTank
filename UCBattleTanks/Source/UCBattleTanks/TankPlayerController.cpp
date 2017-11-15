@@ -7,16 +7,12 @@
 void ATankPlayerController::BeginPlay()
 {
     Super::BeginPlay();
-    //ATank* ControlledTank = GetControlledTank();
+    
     auto ControlledTank = GetControlledTank();
 
     if(!ControlledTank)
     {
         UE_LOG(LogTemp, Warning, TEXT("TankPlayerController not processing the tank"));
-    }
-    else
-    {
-        UE_LOG(LogTemp, Warning, TEXT("TankPlayerController  processing:  %s"), *(ControlledTank->GetName()));
     }
     
 }
@@ -25,10 +21,7 @@ void ATankPlayerController::BeginPlay()
 void ATankPlayerController::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    //UE_LOG(LogTemp, Warning, TEXT("TankPlayerController ticking"));
     AimTowardsCrossHair();
-
-
 }
 
 
@@ -37,6 +30,7 @@ ATank* ATankPlayerController::GetControlledTank() const
     return Cast<ATank>(GetPawn());
 
 }
+
 
 void ATankPlayerController::AimTowardsCrossHair()
 {
@@ -47,7 +41,6 @@ void ATankPlayerController::AimTowardsCrossHair()
     FVector HitLocation;  
     if (GetSightRayHitLocation(HitLocation))
     {
-        //UE_LOG(LogTemp,Warning, TEXT("Hit location: %s"), *HitLocation.ToString());  
         GetControlledTank()->AimAt(HitLocation);
     }   
 }    

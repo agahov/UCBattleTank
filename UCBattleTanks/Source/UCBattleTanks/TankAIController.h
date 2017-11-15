@@ -22,6 +22,10 @@ private:
 	void Tick(float DeltaTime) override;
 	void BeginPlay() override;
 
+
+	//How close move ai  to palyer
+	float AcceptanceRadius  = 900;
+
 public:
 
 	
