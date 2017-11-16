@@ -22,12 +22,16 @@ class UCBATTLETANKS_API ATankPlayerController : public APlayerController
 private:	
 	void BeginPlay() override;
 	void Tick(float DeltaTime) override;
-	
+
+protected:	
+
+		
+
 public:
 
-
-	ATank* GetControlledTank() const;	
-
+	UFUNCTION(BlueprintCallable, Category = "Tank")
+	ATank* GetControlledTank() const;
+	
 
 	//start movint the barrow to cross hair
 	void AimTowardsCrossHair();
