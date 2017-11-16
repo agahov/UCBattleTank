@@ -56,6 +56,7 @@
 * use DotProduct for AI forward moveing
 * moving
 * Use Blueprint Variables
+* create enum FiringState
 
 
 
