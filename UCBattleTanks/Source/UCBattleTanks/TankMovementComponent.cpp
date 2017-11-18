@@ -50,16 +50,14 @@ void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool
 
     auto Cosfun = FVector::DotProduct(AIForwardIntention, TankForward);
 
-    UE_LOG(LogTemp, Warning, TEXT("%s  cos  %f"),*Name, Cosfun);
+   // UE_LOG(LogTemp, Warning, TEXT("%s  cos  %f"),*Name, Cosfun);
     IntendMoveForvard(Cosfun);
 
     auto CrossVector = FVector::CrossProduct(AIForwardIntention, TankForward);
-    UE_LOG(LogTemp, Warning, TEXT("%s cos %f||  z  %f"),*Name, Cosfun, CrossVector.Z);
+    //UE_LOG(LogTemp, Warning, TEXT("%s cos %f||  z  %f"),*Name, Cosfun, CrossVector.Z);
 
     IntendTurnRight(CrossVector.Z);
-
-
-   
-     	
 }
+
+
 

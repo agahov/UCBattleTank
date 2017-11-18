@@ -18,6 +18,7 @@ enum class EFiringState:uint8
 
 class UTankBarrel;
 class UTankTurret;
+class AProjectile;
 
 //Holds barrel's properties and evevation
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -26,16 +27,24 @@ class UCBATTLETANKS_API UTankAimingComponent : public UActorComponent
 	GENERATED_BODY()
 
 public:	
-	// Sets default values for this component's properties
+
+	UFUNCTION(BlueprintCallable, Category = Tank)
+	void Ininitialise(UTankBarrel * BarrelToSet, UTankTurret * TurretToSet);
+
+
 	UTankAimingComponent();
-	void AimAt(FVector HitLocation, float LaunchSpeed);
-
-	void SetBarrelReference(UTankBarrel * BarrelToSet);
-
-	void SetTurretReference(UTankTurret * TurretToSet);
 
 
+	
+	void AimAt(FVector HitLocation);
 
+	// void SetBarrelReference(UTankBarrel * BarrelToSet);
+
+	// void SetTurretReference(UTankTurret * TurretToSet);
+
+
+	UFUNCTION(BlueprintCallable, Category = Tank)
+	void Fire();
 	
 
 	// Called when the game starts
@@ -47,6 +56,18 @@ protected:
 
 	
 private:
+
+
+	UPROPERTY(EditAnywhere, Category = Tank)
+	float LaunchSpeed = 4000;//starting value
+
+	UPROPERTY(EditAnywhere, Category = Tank)
+	float ReloadTimeInSeconds = 3;
+
+	double LastFireTime = 0;
+
+	UPROPERTY(EditAnywhere, Category = Tank)
+	TSubclassOf<AProjectile> ProjectileBlueprint;
 
 	UTankBarrel* Barrel = nullptr;	
 	UTankTurret* Turret = nullptr;	

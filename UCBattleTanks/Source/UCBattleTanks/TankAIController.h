@@ -11,7 +11,8 @@
  * 
  */
 
-class ATank;
+
+class UTankAimingComponent;
 
 UCLASS()
 class UCBATTLETANKS_API ATankAIController : public AAIController
@@ -28,9 +29,13 @@ private:
 
 public:
 
+	void AimAt(FVector HitLocation);
 	
-	
-	ATank* GetPlayerTank() const;	
+	APawn* GetPlayerTank() const;	
+
+	UPROPERTY(BlueprintReadOnly, Category = Tank)
+	UTankAimingComponent* TankAimingComponent = nullptr;
+
 	
 	
 };

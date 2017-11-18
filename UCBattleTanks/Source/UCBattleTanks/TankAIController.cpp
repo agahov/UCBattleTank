@@ -3,14 +3,25 @@
 
 
 #include "TankAIController.h"
-
-#include "Tank.h"
 #include "TankPlayerController.h"
+#include "TankAimingComponent.h"
 
 
 void ATankAIController::BeginPlay()
 {
     Super::BeginPlay();
+
+    auto ControlledTank = GetPawn();
+
+    if(!ControlledTank)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("TankAIController not processing the tank"));
+    }
+
+
+    TankAimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
+
+
 }
 
 
@@ -18,20 +29,27 @@ void ATankAIController::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
     auto PlayerTank = GetPlayerTank();
-    auto ControlledTank = Cast<ATank>(GetPawn());
+    auto ControlledTank = GetPawn();
 
-   if (PlayerTank)
-   {
+   if (!ensure(PlayerTank))return;
+   if (!ensure(ControlledTank)) return;
 
-       MoveToActor(PlayerTank, AcceptanceRadius);
-       ControlledTank->AimAt(PlayerTank->GetActorLocation());
-       //ControlledTank->Fire();
-
-   }
+    MoveToActor(PlayerTank, AcceptanceRadius);
+    AimAt(PlayerTank->GetActorLocation());
+    TankAimingComponent->Fire();
 }
 
 
-ATank* ATankAIController::GetPlayerTank() const
+	
+
+void ATankAIController::AimAt(FVector HitLocation)
+{
+     TankAimingComponent->AimAt(HitLocation); 
+}
+
+
+
+APawn* ATankAIController::GetPlayerTank() const
 {
     auto TankPlayerController = Cast<ATankPlayerController>(GetWorld()->GetFirstPlayerController());
     if (!TankPlayerController) 
@@ -40,7 +58,7 @@ ATank* ATankAIController::GetPlayerTank() const
         return nullptr;
     }
 
-    auto PlayerTank = TankPlayerController->GetControlledTank();
+    auto PlayerTank = TankPlayerController->GetPawn();
     if (!PlayerTank)
     {
         UE_LOG(LogTemp, Warning, TEXT("TankAIController not find the PlayerTank"));

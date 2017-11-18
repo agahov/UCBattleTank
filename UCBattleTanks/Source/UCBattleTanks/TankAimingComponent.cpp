@@ -3,6 +3,7 @@
 #include "TankAimingComponent.h"
 #include "TankBarrel.h"
 #include "TankTurret.h"
+#include "Projectile.h"
 
 
 // Sets default values for this component's properties
@@ -25,22 +26,20 @@ void UTankAimingComponent::BeginPlay()
 }
 
 
-void  UTankAimingComponent::SetBarrelReference(UTankBarrel* BarrelToSet)
+void UTankAimingComponent::Ininitialise(UTankBarrel * BarrelToSet, UTankTurret * TurretToSet)
 {
-	
-	Barrel = BarrelToSet;
+		Barrel = BarrelToSet;
+		Turret = TurretToSet;
+
 }
 
-void  UTankAimingComponent::SetTurretReference(UTankTurret* TurretToSet)
-{
-	Turret = TurretToSet;
-}
+
 
 
 // Called every frame
 
 
-void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
+void UTankAimingComponent::AimAt(FVector HitLocation)
 {
 
 
@@ -106,3 +105,27 @@ void UTankAimingComponent::MoveTurretTowards(FVector AimDirection)
 
 }
 
+
+void UTankAimingComponent::Fire()
+{
+	if (!Barrel) {return;}
+
+	 bool isReloaded = (FPlatformTime::Seconds() - LastFireTime) > ReloadTimeInSeconds;
+	 
+	if (!isReloaded){return;}
+	
+	LastFireTime = FPlatformTime::Seconds();
+
+	auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint, 
+	Barrel->GetSocketLocation(FName("Projectile")),
+	Barrel->GetSocketRotation(FName("Projectile")));
+
+	if (!Projectile)	
+	{
+		UE_LOG(LogTemp,Error, TEXT("define Tank.BP_Projectile"));	
+		return;
+	}
+
+	
+	 Projectile->LunchProjectile(LaunchSpeed); 
+}

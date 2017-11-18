@@ -8,9 +8,10 @@
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
 
+class UTankAimingComponent;
 
 
-class ATank;
+
 /**
  * 
  */
@@ -23,15 +24,25 @@ private:
 	void BeginPlay() override;
 	void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, Category = Tank)
+	float LaunchSpeed = 4000;//starting value
+
+
 protected:	
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Tank")
+	void FoundAimingComponent(UTankAimingComponent* AimingComponentRef);
 		
 
 public:
 
-	UFUNCTION(BlueprintCallable, Category = "Tank")
-	ATank* GetControlledTank() const;
-	
+	void AimAt(FVector HitLocation);
+
+
+	UPROPERTY(BlueprintReadOnly, Category = Tank)
+	UTankAimingComponent* TankAimingComponent = nullptr;
+
+
 
 	//start movint the barrow to cross hair
 	void AimTowardsCrossHair();
