@@ -59,6 +59,8 @@
 * create enum FiringState
 * Refactoring
 * back tick component to AimComponent
+* finished aim ui, change colors 
+
 
 
 

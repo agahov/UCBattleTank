@@ -58,7 +58,7 @@ protected:
 private:
 
 	
-	void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
+	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
 
 
 
@@ -79,6 +79,8 @@ private:
 	void MoveBarrelTowards(FVector AimDirection);
 	void MoveTurretTowards(FVector AimDirection);
 
-	
+	FVector AimDirection;
+
+	bool IsBarrelMoving();
 	
 };
