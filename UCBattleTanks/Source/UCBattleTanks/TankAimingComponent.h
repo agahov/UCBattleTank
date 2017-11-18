@@ -57,6 +57,10 @@ protected:
 	
 private:
 
+	
+	void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
+
+
 
 	UPROPERTY(EditAnywhere, Category = Tank)
 	float LaunchSpeed = 4000;//starting value

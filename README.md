@@ -58,6 +58,7 @@
 * Use Blueprint Variables
 * create enum FiringState
 * Refactoring
+* back tick component to AimComponent
 
 
 
