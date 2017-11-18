@@ -40,7 +40,7 @@ void ATankPlayerController::AimTowardsCrossHair()
     
     auto ControlledTank = GetPawn();
 
-    if (!ensure(ControlledTank)){return;}
+    if (!ControlledTank){return;}
     //get world location if linetrace through crosshair
     //if it is hit the landscape 
         //tell controller tank to aim in this point

@@ -21,6 +21,11 @@ class UCBATTLETANKS_API UTankTrack : public UStaticMeshComponent
 		//Max force for each track in Hewtons
 		UPROPERTY(EditDefaultsOnly)
 		float TrackMaxDrivingForce = 400000 ;//assume 40 tonne tank and 1g accelleration
+
+
+	private:
+		UTankTrack(); 
+		virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
 		
 		
 	

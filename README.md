@@ -60,6 +60,8 @@
 * Refactoring
 * back tick component to AimComponent
 * finished aim ui, change colors 
+* Sideways Friction
+
 
 
 
