@@ -25,16 +25,23 @@ private:
 
 
 	//How close move ai  to palyer
-	float AcceptanceRadius  = 900;
+	
 
 public:
 
+
+	
 	void AimAt(FVector HitLocation);
 	
 	APawn* GetPlayerTank() const;	
 
 	UPROPERTY(BlueprintReadOnly, Category = Tank)
 	UTankAimingComponent* TankAimingComponent = nullptr;
+
+protected:
+	UPROPERTY(EditDefaultsOnly, Category = "Tank")
+	float AcceptanceRadius  = 8000;
+
 
 	
 	

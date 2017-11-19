@@ -64,6 +64,7 @@
 * OnComponentHit Event
 * 176 Avoiding Boolean Flags
 * 177 Improving Tank Aiming
+* 178 Tweaking Tank AI
 
 
 

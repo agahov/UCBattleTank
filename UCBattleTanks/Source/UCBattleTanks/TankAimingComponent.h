@@ -50,6 +50,8 @@ public:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	EFiringState GetFiringState() const;
+
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "Tank")
 	EFiringState FiringState = EFiringState::Reloading;	
