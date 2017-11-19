@@ -57,7 +57,7 @@ void UTankTrack::SetThrottle(float Throttle)
 void UTankTrack::DriveTrack()
 {
     auto Name = GetName();
-    UE_LOG(LogTemp,Warning, TEXT("%s Drive  %f  "), * Name, CurrentThrottle);
+    //UE_LOG(LogTemp,Warning, TEXT("%s Drive  %f  "), * Name, CurrentThrottle);
 
     auto ForceApplied = GetForwardVector() * CurrentThrottle * TrackMaxDrivingForce;
     auto ForceLocation = GetComponentLocation();

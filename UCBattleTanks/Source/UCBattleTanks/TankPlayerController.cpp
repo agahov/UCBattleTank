@@ -47,9 +47,14 @@ void ATankPlayerController::AimTowardsCrossHair()
     FVector HitLocation;  
     if (GetSightRayHitLocation(HitLocation))
     {
+        //UE_LOG(LogTemp, Warning, TEXT("1......Hit Location"));
        
         AimAt(HitLocation);
+    }else
+    {
+        //UE_LOG(LogTemp, Warning, TEXT("0......UNHit Location"));
     }   
+
 }    
 
 

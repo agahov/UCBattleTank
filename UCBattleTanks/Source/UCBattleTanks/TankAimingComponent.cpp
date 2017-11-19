@@ -117,6 +117,7 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 {
 	auto BarrelRotator  = Barrel->GetForwardVector().Rotation();
 	auto AimAsRotator = AimDirection.Rotation();
+	//auto 
 	auto DeltaRotation =  AimAsRotator - BarrelRotator;
 	Barrel->Elevate(DeltaRotation.Pitch) ; //
 }
@@ -129,7 +130,15 @@ void UTankAimingComponent::MoveTurretTowards(FVector AimDirection)
 
 	auto DeltaRotation =  AimAsRotator - BarrelRotator;
 
-	Turret->Azimuth(DeltaRotation.Yaw) ; //
+	if (FMath::Abs (DeltaRotation.Yaw) <180)
+	{
+		Turret->Azimuth(DeltaRotation.Yaw); 
+	}else{
+		Turret->Azimuth(-DeltaRotation.Yaw);
+	}
+
+
+	
 
 }
 

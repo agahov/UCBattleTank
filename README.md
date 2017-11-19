@@ -62,7 +62,8 @@
 * finished aim ui, change colors 
 * Sideways Friction
 * OnComponentHit Event
-
+* 176 Avoiding Boolean Flags
+* 177 Improving Tank Aiming
 
 
 
