@@ -17,12 +17,16 @@ UCLASS()
 class UCBATTLETANKS_API AProjectile : public AActor
 {
 	GENERATED_BODY()
+
+private:
 	
-public:	
-	// Sets default values for this actor's properties
-	AProjectile();
+	UFUNCTION()
+	void OnHit(UPrimitiveComponent* HitComoponent, AActor* OtherActor, UPrimitiveComponent* OtherComoponent, 
+	FVector NormalImpulse, const FHitResult& Hit);
+
 
 protected:
+	AProjectile();
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -33,6 +37,12 @@ protected:
 
 	UPROPERTY(VisibleAnywhere)
 	UParticleSystemComponent* LunchBlast = nullptr;
+
+
+	UPROPERTY(VisibleAnywhere)
+	UParticleSystemComponent* ImpactBlast = nullptr;
+
+
 
 public:	
 	// Called every frame

@@ -103,7 +103,7 @@ void UTankAimingComponent::AimAt(FVector HitLocation)
 }
 
 
-	EFiringState UTankAimingComponent::GetFiringState() const
+	EFiringState UTankAimingComponent::GetFiringState() const	
 	{
 		return FiringState;
 	}
@@ -117,20 +117,20 @@ bool UTankAimingComponent::IsBarrelMoving()
 	
 }
 
-
-void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
+//TODO rename or remove AimDirection
+void UTankAimingComponent::MoveBarrelTowards(FVector AimDirectionLocal)
 {
 	auto BarrelRotator  = Barrel->GetForwardVector().Rotation();
-	auto AimAsRotator = AimDirection.Rotation();
+	auto AimAsRotator = AimDirectionLocal.Rotation();
 	//auto 
 	auto DeltaRotation =  AimAsRotator - BarrelRotator;
 	Barrel->Elevate(DeltaRotation.Pitch) ; //
 }
 
-void UTankAimingComponent::MoveTurretTowards(FVector AimDirection)
+void UTankAimingComponent::MoveTurretTowards(FVector AimDirectionLocal)
 {
 	auto BarrelRotator  = Turret->GetForwardVector().Rotation();
-	auto AimAsRotator = AimDirection.Rotation();
+	auto AimAsRotator = AimDirectionLocal.Rotation();
 
 
 	auto DeltaRotation =  AimAsRotator - BarrelRotator;

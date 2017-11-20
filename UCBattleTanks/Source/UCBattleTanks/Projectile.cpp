@@ -8,7 +8,7 @@
 AProjectile::AProjectile()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(FName("ProjectileMovement"));
 	ProjectileMovement->bAutoActivate = false;
 
@@ -21,7 +21,12 @@ AProjectile::AProjectile()
 
 
 	LunchBlast = CreateDefaultSubobject<UParticleSystemComponent>(FName("LunchBlast"));
-	LunchBlast->AttachTo(RootComponent);
+	LunchBlast->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+
+	ImpactBlast = CreateDefaultSubobject<UParticleSystemComponent>(FName("ImpactBlast"));
+	ImpactBlast->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	ImpactBlast->bAutoActivate = false;
+
 
 
 }
@@ -30,6 +35,7 @@ AProjectile::AProjectile()
 void AProjectile::BeginPlay()
 {
 	Super::BeginPlay();
+	CollisionMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
 	
 }
 
@@ -46,4 +52,15 @@ void AProjectile::LunchProjectile(float Speed)
 	ProjectileMovement->SetVelocityInLocalSpace(FVector::ForwardVector * Speed);
 	ProjectileMovement->Activate();
 }
+
+void AProjectile::OnHit(UPrimitiveComponent* HitComoponent, AActor* OtherActor, UPrimitiveComponent* OtherComoponent,
+FVector NormalImpulse, const FHitResult& Hit)
+{
+    //UE_LOG(LogTemp,Warning, TEXT("Hit"));  
+	LunchBlast->Deactivate();
+	ImpactBlast->Activate();
+	//GetOwner()->DestroyActor();
+	//GetOwner()->
+}
+
 
