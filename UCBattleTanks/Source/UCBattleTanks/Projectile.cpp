@@ -3,7 +3,7 @@
 #include "Projectile.h"
 //#include "ProjectileMovementComponent.h"
 
-//#include "ProjectileMovementComponent.h"
+
 // Sets default values
 AProjectile::AProjectile()
 {
@@ -11,6 +11,18 @@ AProjectile::AProjectile()
 	PrimaryActorTick.bCanEverTick = true;
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(FName("ProjectileMovement"));
 	ProjectileMovement->bAutoActivate = false;
+
+
+	CollisionMesh = CreateDefaultSubobject<UStaticMeshComponent>(FName("CollisionMesh"));
+	SetRootComponent(CollisionMesh);
+	CollisionMesh->SetNotifyRigidBodyCollision(true);
+	CollisionMesh->SetVisibility(false);
+
+
+
+	LunchBlast = CreateDefaultSubobject<UParticleSystemComponent>(FName("LunchBlast"));
+	LunchBlast->AttachTo(RootComponent);
+
 
 }
 

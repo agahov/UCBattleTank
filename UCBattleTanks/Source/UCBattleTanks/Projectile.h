@@ -9,6 +9,9 @@
 
 
 class UProjectileMovementComponent;
+class UStaticMeshComponent;
+class UParticleSystemComponent;
+
 
 UCLASS()
 class UCBATTLETANKS_API AProjectile : public AActor
@@ -24,6 +27,12 @@ protected:
 	virtual void BeginPlay() override;
 
 	UProjectileMovementComponent* ProjectileMovement = nullptr;
+
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* CollisionMesh = nullptr;
+
+	UPROPERTY(VisibleAnywhere)
+	UParticleSystemComponent* LunchBlast = nullptr;
 
 public:	
 	// Called every frame
