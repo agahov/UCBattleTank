@@ -67,6 +67,7 @@
 * 178 Tweaking Tank AI
 * 182 Preparing for Particles
 * 183 Introducing Particle Systems
+* 184 Particle Bounding Boxes
 
 
 
