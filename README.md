@@ -72,6 +72,7 @@
 * 186 Radial Forces  Caching
 * 187 Using GetTimerManager
 * fix Tank down through ground
+* fix warning "no collision box" for tank parts
 
 
 
