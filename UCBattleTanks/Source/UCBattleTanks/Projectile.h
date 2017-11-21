@@ -55,7 +55,10 @@ private:
 	URadialForceComponent* ExplosionForce = nullptr;
 
 
-
+	FTimerHandle TimerHandle;
+	void TimerExpired();
 	
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+	float DestroyDelay = 10.f;
 	
 };

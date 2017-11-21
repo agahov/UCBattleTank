@@ -9,7 +9,7 @@ AProjectile::AProjectile()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(FName("ProjectileMovement"));
+	 ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(FName("ProjectileMovement"));
 	ProjectileMovement->bAutoActivate = false;
 
 
@@ -59,12 +59,22 @@ void AProjectile::LunchProjectile(float Speed)
 void AProjectile::OnHit(UPrimitiveComponent* HitComoponent, AActor* OtherActor, UPrimitiveComponent* OtherComoponent,
 FVector NormalImpulse, const FHitResult& Hit)
 {
-    //UE_LOG(LogTemp,Warning, TEXT("Hit"));  
+    
 	LunchBlast->Deactivate();
 	ImpactBlast->Activate();
 	ExplosionForce->FireImpulse();
+	SetRootComponent(ImpactBlast);
+	CollisionMesh->DestroyComponent();
 	//GetOwner()->DestroyActor();
-	//GetOwner()->
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AProjectile::TimerExpired,DestroyDelay,false);
+}
+
+void AProjectile::TimerExpired()
+{
+	//UE_LOG(LogTemp,Warning, TEXT("TimerExpired"));  
+		GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+		
+		Destroy();	
 }
 
 
