@@ -18,6 +18,16 @@ class UCBATTLETANKS_API AProjectile : public AActor
 {
 	GENERATED_BODY()
 
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	void LunchProjectile(float Speed);
+
+protected:
+	AProjectile();
+
+
 private:
 	
 	UFUNCTION()
@@ -25,30 +35,26 @@ private:
 	FVector NormalImpulse, const FHitResult& Hit);
 
 
-protected:
-	AProjectile();
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	UProjectileMovementComponent* ProjectileMovement = nullptr;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "Components" )
 	UStaticMeshComponent* CollisionMesh = nullptr;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UParticleSystemComponent* LunchBlast = nullptr;
 
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UParticleSystemComponent* ImpactBlast = nullptr;
 
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	URadialForceComponent* ExplosionForce = nullptr;
 
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
-	void LunchProjectile(float Speed);
 
 	
 	

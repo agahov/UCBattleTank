@@ -28,6 +28,9 @@ AProjectile::AProjectile()
 	ImpactBlast->bAutoActivate = false;
 
 
+	ExplosionForce = CreateDefaultSubobject<URadialForceComponent>(FName("ExplosionForce"));
+	ExplosionForce->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+	//ExplosionForce->bAutoActivate = false;
 
 }
 
@@ -59,6 +62,7 @@ FVector NormalImpulse, const FHitResult& Hit)
     //UE_LOG(LogTemp,Warning, TEXT("Hit"));  
 	LunchBlast->Deactivate();
 	ImpactBlast->Activate();
+	ExplosionForce->FireImpulse();
 	//GetOwner()->DestroyActor();
 	//GetOwner()->
 }
