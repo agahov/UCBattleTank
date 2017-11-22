@@ -2,6 +2,7 @@
 
 #include "TankPlayerController.h"
 #include "TankAimingComponent.h"
+#include "Tank.h"
 
 
 void ATankPlayerController::BeginPlay()
@@ -26,6 +27,26 @@ void ATankPlayerController::BeginPlay()
     }
     
 }
+
+
+void ATankPlayerController::SetPawn(APawn* InPawn)
+{
+    Super::SetPawn(InPawn);
+    if (!InPawn) return;
+
+    auto PossessedTank = Cast<ATank>(InPawn);
+
+    if (!ensure(PossessedTank)){return;}
+    PossessedTank->OnTankDead.AddUniqueDynamic(this, &ATankPlayerController::OnTankDeadHandler);
+
+}
+
+
+void ATankPlayerController::OnTankDeadHandler()
+{
+    UE_LOG(LogTemp,Warning, TEXT(".....  ON Player TANK DEAD Handler  "));  
+}
+
 
 
 void ATankPlayerController::Tick(float DeltaTime)

@@ -28,6 +28,12 @@ private:
 	float LaunchSpeed = 4000;//starting value
 
 
+	virtual void SetPawn(APawn* InPawn) override;
+
+	UFUNCTION()
+	void OnTankDeadHandler();
+
+
 protected:	
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Tank")

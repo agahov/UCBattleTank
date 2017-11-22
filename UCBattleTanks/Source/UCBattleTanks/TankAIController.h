@@ -38,6 +38,11 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = Tank)
 	UTankAimingComponent* TankAimingComponent = nullptr;
 
+	virtual void SetPawn(APawn* InPawn) override;
+
+	UFUNCTION()
+	void OnTankDeadHandler();
+
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Tank")
 	float AcceptanceRadius  = 8000;

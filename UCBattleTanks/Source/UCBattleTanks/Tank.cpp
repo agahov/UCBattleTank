@@ -36,7 +36,11 @@ float ATank::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AC
 	CurrentHealth -= ApplyDamage;
 	if (CurrentHealth<=0)
 	{
-		UE_LOG(LogTemp,Warning, TEXT("Tank is Dead  "));  
+		UE_LOG(LogTemp,Warning, TEXT("Tank is Dead  ")); 
+		//OnTankDead.Execute(); 
+		//OnTankDead();
+		OnTankDead.Broadcast();
+		//OnTankDead.ExecuteIfBound();
 	}
 	return ApplyDamage;
 }
@@ -45,4 +49,4 @@ float ATank::getHealthPercent()
 {
 	return (float)CurrentHealth / (float)StartingHealth;
 }
-	
+

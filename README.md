@@ -75,7 +75,7 @@
 * fix warning "no collision box" for tank parts
 * 188 Using TakeDamage on Actors
 * 189 BlueprintPure  Health Bars
-
+* 190 The Observer Pattern
 
 
 

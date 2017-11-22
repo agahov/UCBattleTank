@@ -5,7 +5,7 @@
 #include "TankAIController.h"
 #include "TankPlayerController.h"
 #include "TankAimingComponent.h"
-
+#include "Tank.h"
 
 void ATankAIController::BeginPlay()
 {
@@ -20,8 +20,26 @@ void ATankAIController::BeginPlay()
 
 
     TankAimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
+}
 
 
+void ATankAIController::SetPawn(APawn* InPawn)
+{
+    Super::SetPawn(InPawn);
+    if (!InPawn) return;
+
+    auto PossessedTank = Cast<ATank>(InPawn);
+
+    if (!ensure(PossessedTank)){return;}
+    PossessedTank->OnTankDead.AddUniqueDynamic(this, &ATankAIController::OnTankDeadHandler);
+
+
+}
+
+
+void ATankAIController::OnTankDeadHandler()
+{
+    UE_LOG(LogTemp,Warning, TEXT("FIRE ON TANK DEAD Handler  "));  
 }
 
 

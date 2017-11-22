@@ -9,12 +9,13 @@
 #include "Tank.generated.h"
 
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTankDeadDelegate);
+
 
 UCLASS()
 class UCBATTLETANKS_API ATank : public APawn
 {
 	GENERATED_BODY()
-
 
 private:	
 	ATank();
@@ -22,7 +23,13 @@ private:
 	virtual void BeginPlay() override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	
+
+
 public:
+
+	FTankDeadDelegate OnTankDead;
+
 
 UFUNCTION(BlueprintPure, Category="Health")
 float getHealthPercent();
@@ -33,7 +40,7 @@ virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, A
 UPROPERTY(EditAnywhere, Category = "Tank")
 int32 StartingHealth = 1000;
 
-UPROPERTY(VisibleAnywhere, Category = "Tank")
+UPROPERTY(EditAnywhere, Category = "Tank")
 int32 CurrentHealth = StartingHealth;
 
 
