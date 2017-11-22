@@ -74,6 +74,7 @@
 * fix Tank down through ground
 * fix warning "no collision box" for tank parts
 * 188 Using TakeDamage on Actors
+* 189 BlueprintPure  Health Bars
 
 
 
