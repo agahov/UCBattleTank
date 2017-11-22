@@ -44,7 +44,8 @@ void ATankPlayerController::SetPawn(APawn* InPawn)
 
 void ATankPlayerController::OnTankDeadHandler()
 {
-    UE_LOG(LogTemp,Warning, TEXT(".....  ON Player TANK DEAD Handler  "));  
+    //UE_LOG(LogTemp,Warning, TEXT(".....  ON Player TANK DEAD Handler  "));  
+    StartSpectatingOnly();
 }
 
 

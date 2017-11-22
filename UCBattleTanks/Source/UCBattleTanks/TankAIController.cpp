@@ -39,7 +39,11 @@ void ATankAIController::SetPawn(APawn* InPawn)
 
 void ATankAIController::OnTankDeadHandler()
 {
-    UE_LOG(LogTemp,Warning, TEXT("FIRE ON TANK DEAD Handler  "));  
+    //UE_LOG(LogTemp,Warning, TEXT("FIRE ON TANK DEAD Handler  "));  
+    if (!ensure(GetPawn())) return;
+
+    GetPawn()->DetachFromControllerPendingDestroy();
+
 }
 
 
