@@ -65,7 +65,18 @@ FVector NormalImpulse, const FHitResult& Hit)
 	ExplosionForce->FireImpulse();
 	SetRootComponent(ImpactBlast);
 	CollisionMesh->DestroyComponent();
-	//GetOwner()->DestroyActor();
+	
+
+	UGameplayStatics::ApplyRadialDamage
+	(
+		this,
+		ProjectileDamage,
+		GetActorLocation(),
+		ExplosionForce->Radius,
+		UDamageType::StaticClass(),
+		TArray<AActor*>()
+	);
+
 	GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AProjectile::TimerExpired,DestroyDelay,false);
 }
 

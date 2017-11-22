@@ -73,6 +73,7 @@
 * 187 Using GetTimerManager
 * fix Tank down through ground
 * fix warning "no collision box" for tank parts
+* 188 Using TakeDamage on Actors
 
 
 

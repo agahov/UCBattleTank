@@ -20,14 +20,30 @@ void ATank::BeginPlay()
 	
 }
 
-
-
-
 // Called to bind functionality to input
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 }
 
+
+float ATank::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) 
+{
+	
+	//auto Name = GetOwner()->GetName();
+	int32 DamagePoints = FGenericPlatformMath::RoundToInt(Damage);
+	int32 ApplyDamage = FMath::Clamp<int32>(DamagePoints,0, CurrentHealth);
+	CurrentHealth -= ApplyDamage;
+	if (CurrentHealth<=0)
+	{
+		UE_LOG(LogTemp,Warning, TEXT("Tank is Dead  "));  
+	}
+
+	
+	
+
+
+	return ApplyDamage;
+}
 
 

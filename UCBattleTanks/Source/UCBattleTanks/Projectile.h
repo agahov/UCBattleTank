@@ -39,6 +39,11 @@ private:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+
+	UPROPERTY(EditDefaultsOnly, Category = "Tank")
+	float ProjectileDamage  = 100;
+
+
 	UProjectileMovementComponent* ProjectileMovement = nullptr;
 
 	UPROPERTY(VisibleAnywhere, Category = "Components" )

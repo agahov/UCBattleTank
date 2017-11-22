@@ -22,6 +22,17 @@ private:
 	virtual void BeginPlay() override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+public:
+virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
+
+
+UPROPERTY(EditAnywhere, Category = "Tank")
+int32 StartingHealth = 1000;
+
+UPROPERTY(VisibleAnywhere, Category = "Tank")
+int32 CurrentHealth = StartingHealth;
+
+
 
 
 
