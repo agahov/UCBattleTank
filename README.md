@@ -77,6 +77,8 @@
 * 189 BlueprintPure  Health Bars
 * 190 The Observer Pattern
 * 191 Finishing Off - Part 1
+* 192 Finishing Off - Part 2
+* fin 
 
 
 
